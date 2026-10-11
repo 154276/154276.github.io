@@ -129,7 +129,7 @@ function choose(subject,unit){
  const primary=orderQuestions(pool).slice(0,5);
  const need=5-primary.length;
  if(need>0)primary.push(...orderQuestions(extra).slice(0,need));
- return shuffle(primary);
+ return unit?primary:shuffle(primary);
 }
 function start(subject=null,unit=null){
  clearWarn();
